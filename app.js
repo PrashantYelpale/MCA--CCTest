@@ -15,9 +15,9 @@ app.get('/script.js', (req, res) => {
 });
 
 
-app.get('/blocksdk.js', (req, res) => {
+app.get('/blocksdk1.js', (req, res) => {
 
-  res.sendFile(path.join(__dirname, 'blocksdk.js'));
+  res.sendFile(path.join(__dirname, 'blocksdk1.js'));
 
 });
  
