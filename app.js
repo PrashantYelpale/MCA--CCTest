@@ -4,22 +4,13 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Serve static files from the root directory
-app.use(express.static(path.join(__dirname)));
-
-// Keep your original routes
-app.get('/script.js', (req, res) => {
-  res.sendFile(path.join(__dirname, 'script.js'));
-});
+app.use(express.static(__dirname));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Add a catch-all route for other static files
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, req.url));
-});
-
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
 });
+ 
