@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || 3000;
  
 // Serve blocksdk.js from the root directory
-app.get('/blocksdk.js', (req, res) => {
+app.get('/node_modules/blocksdk/blocksdk.js', (req, res) => {
   res.sendFile(path.join(__dirname, 'blocksdk.js'));
 });
  
