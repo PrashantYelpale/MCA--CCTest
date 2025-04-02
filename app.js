@@ -13,13 +13,6 @@ app.get('/script.js', (req, res) => {
   res.sendFile(path.join(__dirname, 'script.js'));
 
 });
-
-
-app.get('/blocksdk1.js', (req, res) => {
-
-  res.sendFile(path.join(__dirname, 'blocksdk1.js'));
-
-});
  
 app.get('/', (req, res) => {
 
